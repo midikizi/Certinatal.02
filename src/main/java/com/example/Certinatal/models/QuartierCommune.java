@@ -19,7 +19,7 @@ public class QuartierCommune {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private Long id;
-
+    private String nom_Quartier;
     @ManyToOne
     private Ville ville;
 

@@ -1,10 +1,6 @@
 package com.example.Certinatal.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -19,9 +15,11 @@ public class Poste {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String libelle;
-
     private String adresse;
-
+    private String email;
+    private String password;
+    @OneToOne(cascade = CascadeType.ALL)
+    private Role role;
     private String contact;
 
     @OneToOne

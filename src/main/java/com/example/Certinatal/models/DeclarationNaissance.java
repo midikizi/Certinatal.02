@@ -14,15 +14,30 @@ import lombok.Setter;
 @Entity
 @Getter @Setter
 @AllArgsConstructor @NoArgsConstructor
-public class Attestation_naissance {
+public class DeclarationNaissance {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private int num_ref_demande;
 
-    private Instant date_delivrance;
+    private int nbEnfantsVivants;
 
-//    @OneToOne
-//    private Enfant enfant;
+    private int nbEnfantsMorts;
+
+    private boolean mariageEtatCivil;
+
+    private boolean mariageCoutumier;
+
+    private String type_naissance;
+
+    private Instant date_declaration;
+
+    private String statut_demande;
+
+    @OneToOne
+    private AttestationNaissance attestationNaissance;
+
+    @OneToOne
+    private Utilisateur agentMunicipal;
+
 }

@@ -4,7 +4,9 @@ public enum TypeRole {
     AGENT_POSTE,
     AGENT_CIVIL,
     PERSONNEL_MEDICAL,
-    PARENTS
+    MAIRIE,
+    POSTE,
+    CENTRE_SANTE
 
 }
 
