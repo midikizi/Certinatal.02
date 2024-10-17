@@ -16,7 +16,7 @@ import java.time.Instant;
 @NoArgsConstructor
 public class CentreSanteDTO {
     private  Long id;
-    private String nomDistrictDanitaire;
+    private String nomDistrictSanitaire;
     private String adresse;
     private String contact;
     private Instant dateCreation;

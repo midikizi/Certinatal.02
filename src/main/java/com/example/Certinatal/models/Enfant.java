@@ -1,6 +1,7 @@
 package com.example.Certinatal.models;
 import java.time.Instant;
 
+import com.example.Certinatal.Enum.TypeAccouchement;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -30,6 +31,11 @@ public class Enfant {
 
     private String Situation_matrimoniale_parents;
 
-    @OneToOne
+    @Enumerated(EnumType.STRING)
+    @Column(name = "type_accouchement", columnDefinition = "varchar(255)")
     private TypeAccouchement type_accouchement;
+
+    @ManyToOne
+    private CentreSante centreSante;
+
 }

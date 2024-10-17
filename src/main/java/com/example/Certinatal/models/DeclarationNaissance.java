@@ -1,6 +1,7 @@
 package com.example.Certinatal.models;
 import java.time.Instant;
 
+import com.example.Certinatal.Enum.TypeAccouchement;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -28,11 +29,15 @@ public class DeclarationNaissance {
 
     private boolean mariageCoutumier;
 
-    private String type_naissance;
-
     private Instant date_declaration;
 
     private String statut_demande;
+
+    @OneToOne
+    private Enfant enfant;
+
+    @OneToOne
+    private Parents declarant;
 
     @OneToOne
     private AttestationNaissance attestationNaissance;

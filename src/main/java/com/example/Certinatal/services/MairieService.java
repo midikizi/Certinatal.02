@@ -11,3 +11,4 @@ public interface MairieService {
     void delete(Long id);
     MairieDTO getById(Long id);
 }
+

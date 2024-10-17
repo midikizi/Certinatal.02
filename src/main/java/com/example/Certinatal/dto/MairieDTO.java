@@ -15,6 +15,6 @@ public class MairieDTO {
     private String contact;
     private String Adresse;
     private String email;
-//    private String password;
+//  private String password;
 
 }

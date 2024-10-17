@@ -1,18 +1,19 @@
 package com.example.Certinatal.dto;
 
+
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.Instant;
-@Getter @Setter
+
 @AllArgsConstructor @NoArgsConstructor
-public class AttestationNaissanceDTO {
+@Getter @Setter
+public class LivretFammilleDTO {
     private Long id;
-    private int num_ref_demande;
+    private Instant date_ajout;
 
-    private Instant date_delivrance;
-
-    private Long enfantId;
+    private Long parentsId;
 }
